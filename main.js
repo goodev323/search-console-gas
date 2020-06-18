@@ -23,7 +23,7 @@ const updateSheets = () => {
   autoResizeColumn();
 }
 
-const onOpen = () => {
+const addMenu = () => {
   // 更新用のメニューを追加
   SpreadsheetApp.getUi()
       .createMenu('Search Console')
