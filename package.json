@@ -5,6 +5,9 @@
   "repository": "https://github.com/go0dev/search-console-gas.git",
   "author": "go0dev <go0dev@outlook.com>",
   "license": "MIT",
+  "scripts": {
+    "push": "clasp push --watch"
+  },
   "dependencies": {},
   "devDependencies": {
     "@types/google-apps-script": "^1.0.14",
