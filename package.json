@@ -1,0 +1,23 @@
+{
+  "name": "search-console-gas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/go0dev/search-console-gas.git",
+  "author": "go0dev <go0dev@outlook.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.14",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5"
+  },
+  "eslintIgnore": [
+    "src/**/*.js",
+    "node_modules"
+  ]
+}
