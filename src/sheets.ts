@@ -52,7 +52,16 @@ const getAllDataTable = (sheet: GoogleAppsScript.Spreadsheet.Sheet) => {
   return dataTable;
 }
 
-const setDataTableRow = (sheet: GoogleAppsScript.Spreadsheet.Sheet, table: TableDataType[][], rowNum: number) => {
-  const dataRow = table[rowNum];
-  sheet.getRange(rowNum + 1, 1, 1, dataRow.length).setValues([dataRow]);
+const setDataTable = (sheet: GoogleAppsScript.Spreadsheet.Sheet, table: TableDataType[][]) => {
+  const header = table[0];
+  let dataStartColumn = 0;
+  for(const data of header){
+    if(data instanceof Date){
+      break;
+    }
+    dataStartColumn++;
+  }
+  dataStartColumn--;
+  const dataTable = table.map(row => row.slice(dataStartColumn));
+  sheet.getRange(1, dataStartColumn + 1, table.length, dataTable[0].length).setValues(dataTable);
 }

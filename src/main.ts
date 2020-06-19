@@ -60,7 +60,7 @@ const updateSheets = () => {
     }
     table[i][importedColumn] = true;
   }
-  targetSheet.getRange(1, 1, table.length, table[0].length).setValues(table);
+  setDataTable(targetSheet, table);
 };
 
 const onOpen = () => {
